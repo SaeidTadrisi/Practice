@@ -4,6 +4,7 @@ public class Car extends Vehicle implements Trunk, GearBox {
     private String brand;
     private long trunkValue;
     private String typeOfGearBox;
+    static int numberOfSoldCar;
 
 
     public void doorsAreOpen(){
@@ -12,6 +13,9 @@ public class Car extends Vehicle implements Trunk, GearBox {
 
     public void doorsAreClosed(){
         doors = false;
+    }
+
+    public Car () {
     }
 
     public Car (String brand){
