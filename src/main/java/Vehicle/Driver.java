@@ -1,3 +1,5 @@
+package Vehicle;
+
 public class Driver {
 
     private static String driverName = "Josh";

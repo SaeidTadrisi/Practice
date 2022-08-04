@@ -1,3 +1,5 @@
+package Vehicle;
+
 public class Car extends Vehicle implements Trunk, GearBox {
 
     private boolean doors;

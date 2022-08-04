@@ -1,3 +1,6 @@
+package Vehicle;
+
+import Vehicle.Driver;
 import org.junit.jupiter.api.Test;
 
 public class Driver_License_Test {

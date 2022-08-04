@@ -1,3 +1,7 @@
+package Vehicle;
+
+import Vehicle.PrintVehicleNames;
+import Vehicle.Vehicle;
 import org.junit.jupiter.api.Test;
 
 public class Print_Vehicle_Name_Test {
@@ -12,7 +16,7 @@ public class Print_Vehicle_Name_Test {
         Vehicle cruise = new Ship("Cruise");
 
 
-        Vehicle [] vehicles = {bmw, fiat, volvo, rex, cruise};
+        Vehicle[] vehicles = {bmw, fiat, volvo, rex, cruise};
         PrintVehicleNames printVehicleNames = new PrintVehicleNames(vehicles);
         String vehicleNames = printVehicleNames.execute();
         System.out.println(vehicleNames);

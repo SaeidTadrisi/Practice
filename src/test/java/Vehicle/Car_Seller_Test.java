@@ -1,3 +1,7 @@
+package Vehicle;
+
+import Vehicle.Car;
+import Vehicle.Seller;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

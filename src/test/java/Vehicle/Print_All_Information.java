@@ -1,3 +1,6 @@
+package Vehicle;
+
+import Vehicle.Vehicle;
 import org.junit.jupiter.api.Test;
 
 public class Print_All_Information {

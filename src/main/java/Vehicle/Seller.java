@@ -1,3 +1,5 @@
+package Vehicle;
+
 public class Seller {
 
     public static String listOfSeller [] = new String [5];

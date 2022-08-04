@@ -1,3 +1,5 @@
+package Vehicle;
+
 public class PrintAllInformation {
 
     Vehicle[] vehicles;

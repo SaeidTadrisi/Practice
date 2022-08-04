@@ -1,27 +1,29 @@
-public class Ship extends Vehicle {
+package Vehicle;
+
+public class MotorCycle extends Vehicle {
 
     private String brand;
     private String typeOfGearBox;
     private long trunkValue;
 
-    public Ship (String brand){
+    public MotorCycle (String brand){
         this.brand = brand;
     }
 
-    public Ship (String brand, String typeOfGearBox, long trunkValue){
+    public MotorCycle (String brand, String typeOfGearBox, long trunkValue){
         this.brand = brand;
         this.typeOfGearBox = typeOfGearBox;
         this.trunkValue = trunkValue;
     }
 
-    public boolean isMoving() {
-        if (safety && start) {
+    public boolean isMoving (){
+        if (start && safety){
             return true;
-        } else
+        }else
             return false;
     }
 
-    public String getBrands() {
+    public String getBrands(){
         return brand;
     }
 
