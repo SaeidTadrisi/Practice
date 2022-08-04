@@ -6,6 +6,7 @@ public class CalculatorUi {
 
         private static JTextField jTextField;
         private static String firstNumber;
+        private static String lastOperator;
 
     public static void main (String ... args) {
 
@@ -32,12 +33,12 @@ public class CalculatorUi {
         JButton zero = getButton("0", 50, 200);
         JButton point = getButton(".", 0, 200);
 
-
         JButton plus = new JButton("+");
         plus.setBounds(150,50,50,50);
         plus.addActionListener(e -> {
             firstNumber= jTextField.getText();
             jTextField.setText("");
+            lastOperator = plus.getText();
         });
 
         JButton minus = new JButton("-");
@@ -45,6 +46,7 @@ public class CalculatorUi {
         minus.addActionListener(e -> {
             firstNumber = jTextField.getText();
             jTextField.setText("");
+            lastOperator = minus.getText();
         });
 
         JButton multiply = new JButton("x");
@@ -52,6 +54,7 @@ public class CalculatorUi {
         multiply.addActionListener(e -> {
             firstNumber = jTextField.getText();
             jTextField.setText("");
+            lastOperator = multiply.getText();
         });
 
         JButton divide = new JButton("/");
@@ -59,32 +62,37 @@ public class CalculatorUi {
         divide.addActionListener(e -> {
             firstNumber = jTextField.getText();
             jTextField.setText("");
+            lastOperator = divide.getText();
         });
 
         JButton equal = new JButton("=");
         equal.setBounds(100,200,50,50);
         equal.addActionListener(e -> {
             Calculator calculator = new Calculator();
-            String syntax = jTextField.getText();
-                if (syntax == "+") {
+            String syntax = lastOperator;
+            switch (syntax) {
+                case "+": {
                     String result = calculator.add(firstNumber, jTextField.getText());
                     jTextField.setText(result);
-            }else
-                if (syntax == "-"){
+                    break;
+                }
+                case "-": {
                     String result = calculator.sub(firstNumber, jTextField.getText());
                     jTextField.setText(result);
-            }else
-                if (syntax == "*"){
+                    break;
+                }
+                case "x": {
                     String result = calculator.multi(firstNumber, jTextField.getText());
                     jTextField.setText(result);
-            }else
-                if (syntax == "/"){
+                    break;
+                }
+                case "/": {
                     String result = calculator.div(firstNumber, jTextField.getText());
                     jTextField.setText(result);
+                    break;
                 }
+            }
         });
-
-
 
         calculatorUi.add(jTextField);
         calculatorUi.add(cancel);
