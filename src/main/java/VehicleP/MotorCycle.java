@@ -1,16 +1,18 @@
-package Vehicle;
+package VehicleP;
+
+import VehicleP.Car.GearBox;
 
 public class MotorCycle extends Vehicle {
 
     private String brand;
-    private String typeOfGearBox;
+    private GearBox typeOfGearBox;
     private long trunkValue;
 
     public MotorCycle (String brand){
         this.brand = brand;
     }
 
-    public MotorCycle (String brand, String typeOfGearBox, long trunkValue){
+    public MotorCycle (String brand, GearBox typeOfGearBox, long trunkValue){
         this.brand = brand;
         this.typeOfGearBox = typeOfGearBox;
         this.trunkValue = trunkValue;
@@ -27,7 +29,7 @@ public class MotorCycle extends Vehicle {
         return brand;
     }
 
-    public String getTypeOfGearBox() {
+    public GearBox getTypeOfGearBox() {
         return typeOfGearBox;
     }
 

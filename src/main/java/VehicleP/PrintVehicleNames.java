@@ -1,9 +1,9 @@
-package Vehicle;
+package VehicleP;
 
 public class PrintVehicleNames {
 
     String brand;
-    Vehicle [] vehicles = {};
+    Vehicle[] vehicles = {};
 
     public PrintVehicleNames (Vehicle [] vehicles){
         this.vehicles = vehicles;

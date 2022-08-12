@@ -1,9 +1,11 @@
-package Vehicle;
+package VehicleP;
+
+import VehicleP.Car.GearBox;
 
 public abstract class Vehicle {
 
-    boolean safety;
-    boolean start;
+    public boolean safety;
+    public boolean start;
 
     public void vehicleIsSafe(){
         safety = true;
@@ -25,7 +27,7 @@ public abstract class Vehicle {
 
     public abstract String getBrands();
 
-    public abstract String getTypeOfGearBox();
+    public abstract GearBox getTypeOfGearBox();
 
     public abstract long getTrunkValue();
 }

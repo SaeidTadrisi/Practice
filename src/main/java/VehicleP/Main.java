@@ -1,6 +1,7 @@
-package Vehicle;
+package VehicleP;
 
-import Vehicle.Car;
+import VehicleP.Car.Car;
+import VehicleP.Car.GearBox;
 
 import java.util.Scanner;
 
@@ -13,18 +14,19 @@ public class Main {
         }
 
         String brand = args[0];
-        String typeOfGearBox = args[1];
+        GearBox typeOfGearBox = GearBox.valueOf(args[1]);
         String trunkValue = args[2];
         Car car = new Car(brand, typeOfGearBox, Integer.parseInt(trunkValue));
 
         System.out.println(car.getBrands());
         System.out.println(car.getTrunkValue());
         System.out.println(car.typeOfGearBox());
+
         boolean moving = car.isMoving();
         if (moving){
-            System.out.println("Vehicle.Car Is Moving");
+            System.out.println("Vehicle.Car.Car Is Moving");
         }else
-            System.out.println("Vehicle.Car Is Parked");
+            System.out.println("Vehicle.Car.Car Is Parked");
 
         Scanner input = new Scanner(System.in);
 
@@ -32,12 +34,14 @@ public class Main {
         brand = input.nextLine();
 
         System.out.println("What Type Of Vehicle.GearBox You Like?");
-        typeOfGearBox = input.nextLine();
+        typeOfGearBox = GearBox.valueOf(input.nextLine());
 
         System.out.println("How Much Capacity You Need For Vehicle.Trunk? ");
         trunkValue = input.nextLine();
 
         System.out.println("You Requested " + brand + " With " + typeOfGearBox + " Vehicle.GearBox And " + trunkValue + " Litr Vehicle.Trunk Value");
+
+
     }
 
 

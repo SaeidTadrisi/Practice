@@ -1,6 +1,6 @@
-package Vehicle;
+package VehicleP;
 
-import Vehicle.Vehicle;
+import VehicleP.Car.Car;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

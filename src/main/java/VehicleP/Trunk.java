@@ -1,4 +1,4 @@
-package Vehicle;
+package VehicleP;
 
 public interface Trunk {
 

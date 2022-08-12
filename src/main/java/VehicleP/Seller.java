@@ -1,4 +1,6 @@
-package Vehicle;
+package VehicleP;
+
+import VehicleP.Car.Car;
 
 public class Seller {
 

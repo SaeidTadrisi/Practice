@@ -1,12 +1,15 @@
-package Vehicle;
+package VehicleP.Car;
+import VehicleP.Trunk;
+import VehicleP.GearBox;
+import VehicleP.Vehicle;
 
 public class Car extends Vehicle implements Trunk, GearBox {
 
     private boolean doors;
     private String brand;
     private long trunkValue;
-    private String typeOfGearBox;
-    static int numberOfSoldCar;
+    public VehicleP.Car.GearBox typeOfGearBox;
+    public static int numberOfSoldCar;
 
 
     public void doorsAreOpen(){
@@ -24,7 +27,7 @@ public class Car extends Vehicle implements Trunk, GearBox {
         this.brand = brand;
     }
 
-    public Car (String brand, String typeOfGearBox, long trunkValue){
+    public Car (String brand, VehicleP.Car.GearBox typeOfGearBox, long trunkValue){
         this.brand = brand;
         this.typeOfGearBox = typeOfGearBox;
         this.trunkValue = trunkValue;
@@ -38,7 +41,7 @@ public class Car extends Vehicle implements Trunk, GearBox {
     }
 
 
-    public String getTypeOfGearBox() {
+    public VehicleP.Car.GearBox getTypeOfGearBox() {
         return typeOfGearBox;
     }
 
@@ -54,7 +57,7 @@ public class Car extends Vehicle implements Trunk, GearBox {
         return trunkValue;
     }
 
-    public String typeOfGearBox() {
+    public VehicleP.Car.GearBox typeOfGearBox() {
         return typeOfGearBox;
     }
 
